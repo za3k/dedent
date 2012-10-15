@@ -1,4 +1,5 @@
 'dedent' is a small script to convert hierarchical, indented files into something which can easily be sent into standard unix tools.  The program 'indent' performs the reverse transformation
+'dedent' is written in Python 3
 
 Caveats:
     - The output includes trailing whitespace.  Make sure not to trim it.
