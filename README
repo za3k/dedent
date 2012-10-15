@@ -1,7 +1,36 @@
 'dedent' is a small script to convert hierarchical, indented files into something which can easily be sent into standard unix tools.  The program 'indent' performs the reverse transformation
 
-Sample input and output can be seen by running dedent on any of the files in the included example folder.
-
 Caveats:
     - The output includes trailing whitespace.  Make sure not to trim it.
     - Escape sequences are not honored, and 'dedent' pays no particular attention to common string sequences.
+
+Sample input and output can be seen by running dedent on any of the files in the included example folder.
+
+Animals
+    Birds
+        Hummingbird
+    Mammals
+        Dog
+Trees
+    Oak
+    Elm
+
+gives the output (Where underscores represent spaces for readability):
+
+=Animals
+>____
+=Birds
+>____
+=Hummingbird
+<____
+=Mammals
+>____
+=Dog
+<____
+<____
+=Trees
+>____
+=Oak
+=Elm
+<____
+
